@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Hybrid Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="min-h-screen">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="container navbar-content">
+                <div class="navbar-brand">MyPortfolio</div>
+                <ul class="nav-list">
+                    <li><button class="nav-button active" data-section-id="hero-section">Home</button></li>
+                    <li><button class="nav-button" data-section-id="projects-section">Projects</button></li>
+                    <li><button class="nav-button" data-section-id="contact-section">Contact</button></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="container">
+            <!-- Hero Section -->
+            <section id="hero-section" class="section-content hero-section">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="text-yellow-300">NC</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        A Business Analyst expert in translating complex data into actionable insights, empowering informed decision-making and strategic growth.
+                    </p>
+                    <button class="hero-button" data-section-id="projects-section">
+                        View My Work
+                    </button>
+                </div>
+                <div class="hero-image-container">
+                    <img
+                        src="./images.jpg"
+                        src="https://placehold.co/300x300/6366F1/FFFFFF?text=Profile"
+                        alt="Profile"
+                        class="hero-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x300/6366F1/FFFFFF?text=Profile';"
+                    />
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects-section" class="section-content">
+                <h2 class="text-4xl font-bold text-center text-indigo-700 mb-10">My Projects</h2>
+                <div id="projects-grid" class="projects-grid">
+                    <!-- Project cards will be injected here by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Project Detail Page (Separate, hidden by default) -->
+            <section id="project-detail-page" class="section-content project-detail-section hidden">
+                <!-- Removed 'Back to Projects' button -->
+                <h2 id="detail-project-title" class="detail-title"></h2>
+                <div id="detail-media-container" class="detail-media-container">
+                    <!-- Media (image or iframe) will be injected here -->
+                </div>
+                <p id="detail-project-description" class="detail-description"></p>
+                <a id="detail-pdf-download" href="#" target="_blank" class="detail-download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                    Download PDF
+                </a>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact-section" class="section-content">
+                <h2 class="text-4xl font-bold text-center text-indigo-700 mb-10">Get in Touch</h2>
+                <div class="contact-form-container">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="form-input"
+                                placeholder="Your Name"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-input"
+                                placeholder="your.email@example.com"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                class="form-textarea"
+                                placeholder="Your message here..."
+                                required
+                            ></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="form-submit-button">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                    <!-- Removed 'You can also reach me at:' block -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> MyPortfolio. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+<!-- src="https://placehold.co/300x300/6366F1/FFFFFF?text=Profile" -->
